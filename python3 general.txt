@@ -1,0 +1,44 @@
+-formateo raro de strings:
+your_name = "Albert O'Connor"
+string = "Hello, {0}!" -> el 0 indica q argumento tomar, si tuviera varios tonces {0} ... {1} ...
+print(string.format(your_name))
+print('Hola, {name}! Tu color fav es {favorite_color}.'.format(name="Albert O'Connor", favorite_color='green'))
+print("-"*40)
+
+- hay \n y \r\n
+
+- True y False
+
+- if statement:
+if condicion:
+	...
+else:
+	...
+LA INDENTACION ES IMPORTANTE
+
+- and y or son && y || en C
+
+- listas:
+[]
+["Agua","Coca"]
+[True,0,"Hola"]	-> Maemia que desastre
+lista[2]	-> retorna el n elem de la lista
+range(0,10)	-> crea una lista que va del 0 al 10
+
+-diccionarios: como listas pero indexados con una key
+{}
+mydic = {key:value,key2:value2}
+mydic[key2] retona value2
+
+data = {"name": "Albert O'Connor","favorite_color":"green"}
+print("Hello, {name}! Your favorite color is {favorite_color}.".format(**data))
+
+-dir(objeto): te muestra las funciones que podes llamar de ese objeto
+	ej dir("Hola") te dice lo que podes hacer con un string
+
+-loops:
+for item in lista:
+	hacer algo
+for key in diccionario:
+	algo
+LA INDENTACION ES IMPORTANTE

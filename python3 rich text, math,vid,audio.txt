@@ -1,0 +1,51 @@
+from IPython.display import display
+from IPython.display import (
+    display_pretty, display_html, display_jpeg,
+    display_png, display_json, display_latex, display_svg
+)
+from IPython.display import Math
+Math(r'F(k) = \int_{-\infty}^{\infty} f(x) e^{2\pi i k} dx') -> te dibuja la ecuacion, buenisimo
+
+from IPython.display import Latex
+Latex(r"""\begin{eqnarray}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\
+\nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} & = 0 
+\end{eqnarray}""")
+
+ó
+
+%%latex
+\begin{align}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\
+\nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} & = 0
+\end{align}
+
+from IPython.display import Audio
+Audio(url="http://www.nch.com.au/acm/8k16bitpcm.wav")
+
+import numpy as np
+max_time = 3
+f1 = 220.0
+f2 = 224.0
+rate = 8000.0
+L = 3
+times = np.linspace(0,L,rate*L)
+signal = np.sin(2*np.pi*f1*times) + np.sin(2*np.pi*f2*times)
+
+Audio(data=signal, rate=rate)
+
+
+from IPython.display import YouTubeVideo
+YouTubeVideo('sjfsUzECqK0')
+
+from IPython.display import HTML
+from base64 import b64encode				-> te encodeas un video
+with open("../images/animation.m4v", "rb") as f:
+    video = f.read()
+video_encoded = b64encode(video).decode('ascii')
+video_tag = '<video controls alt="test" src="data:video/x-m4v;base64,{0}">'.format(video_encoded)
+HTML(data=video_tag)

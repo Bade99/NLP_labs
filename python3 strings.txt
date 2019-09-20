@@ -1,0 +1,17 @@
+-print(type("hola")) -> <class 'str'>
+-tenes la \ para hacer cosas como \n \t \" \\
+string[4] 					-> accedo al caracter nro 4 arrancando desde 0
+string[5:10]					-> tomo partes
+string[:3]					-> tomo los primeros n
+string[:-3]					-> tomo los ultimos n
+string[3:]					-> tomo todo menos los primeros n
+string[:-3]					-> tomo todo menos los ultimos n
+string[::-1]					-> da vuelta el string
+string.split()					-> retorna lista con las palabras separadas
+string.replace('a', 'b')			-> reemplazo todos los a con b
+string.join(otroString)
+string.capitalize()				-> capitaliza la primer letra de la palabra
+string.center(15, '-')				-> te centra el string en un rango con un padding
+	ej: string.center(15, '*') -> *****python****
+string.find('p')				-> retorna el indice ó -1
+string.strip()					-> saca whitespaces al inicio y final
